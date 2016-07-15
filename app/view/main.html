@@ -1,0 +1,20 @@
+<div>
+    <h4>Once a bee is hit, it's Hit Count increases by 1 and Hit Point reduces by the Deduct amount. Remaining Hit Point indicates how much life is left in the bee.
+        Once the Remaining Hit Point touches 0, the bee is dead. Once the Queen bee dies, all bees die.</h4>
+    <h5>Click on the button below to hit a random bee</h5>
+    <button id="hit" class="btn btn-primary" ng-disabled="gameover" ng-click="hitABee()">Hit a Bee</button>
+    <span ng-show="gameover">Game over! <button class="btn btn-success" ng-click="newGame()">Start A New Game</button></span>
+
+    <table class="table">
+        <thead>
+            <th>Bee Type</th><th>Hit Point</th><th>Deduct</th><th>Hit Count</th><th>Remaining Hit Point</th><th>Health</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="bee in bees" ng-class="bee.remaining < bee.deduct ?  (bee.remaining == 0? 'deadbee': 'halfdeadbee') : 'alivebee'">
+                <td>{{bee.name}}</td><td>{{bee.hitpoint}}</td><td>{{bee.deduct}}</td><td>{{bee.hit}}</td>
+                <td>{{bee.remaining}} &nbsp;&nbsp; <span class="msg" ng-show="bee.struck">This one has been hit (ouch)!</span></td><td>{{bee.health}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+}
+
+.maincontainer {
+    position: relative;
+    min-height: 100%;
+}
+
+.body {
+    padding-bottom:60px;   /* Height of the footer */
+}
+
+.header {
+    background-color:#880000;
+    color: white;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #0d3349;
+    color: whitesmoke;
+    bottom: 0;
+    width: 100%;
+    position:absolute;
+    font-size: 12px;
+    padding:5px 0px 5px 5px;
+}
+
+
+.deadbee {
+    color: red;
+}
+
+.alivebee {
+    color: green;
+}
+
+.halfdeadbee {
+    color: darkorange;
+}
+
+.msg {
+    color: blue;
+}
